@@ -3,6 +3,7 @@ package com.wek.holdem.utils;
 import com.wek.holdem.cardComparator.CardComparator;
 import com.wek.holdem.cardComparator.HighCardComparator;
 import com.wek.holdem.cardComparator.OnePairComparator;
+import com.wek.holdem.cardComparator.TwoPairComparator;
 import com.wek.holdem.entity.Card;
 import com.wek.holdem.entity.CardGroup;
 import com.wek.holdem.entity.CardLevelHandler;
@@ -18,6 +19,7 @@ public class Pokerutils {
     public final static CardLevelHandler cardLevelHandler = new CardLevelHandler();
 
     static {
+        cardComparatorMap.put(GroupLevel.TWO_PAIR, new TwoPairComparator());
         cardComparatorMap.put(GroupLevel.HIGH_CARD, new HighCardComparator());
         cardComparatorMap.put(GroupLevel.ONE_PAIR, new OnePairComparator());
     }

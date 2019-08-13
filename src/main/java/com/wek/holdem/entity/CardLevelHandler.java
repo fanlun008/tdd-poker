@@ -1,9 +1,6 @@
 package com.wek.holdem.entity;
 
-import com.wek.holdem.strategy.HighCardLevelStrategy;
-import com.wek.holdem.strategy.ICardLevelStrategy;
-import com.wek.holdem.strategy.OnePairLevelStrategy;
-import com.wek.holdem.strategy.TwoPairLevelStrategy;
+import com.wek.holdem.strategy.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +13,7 @@ public class CardLevelHandler {
         strategyList.add(new TwoPairLevelStrategy());
         strategyList.add(new OnePairLevelStrategy());
         strategyList.add(new HighCardLevelStrategy());
+        strategyList.add(new BasicLevelStrategy());
     }
 
     public GroupLevel computeLevel(CardGroup cardGroup) {

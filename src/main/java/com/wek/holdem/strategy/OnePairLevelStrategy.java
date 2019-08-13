@@ -20,7 +20,8 @@ public class OnePairLevelStrategy extends AbstractLevelStrategy {
                     return null;
                 }
             }
+            return GroupLevel.ONE_PAIR;
         }
-        return GroupLevel.ONE_PAIR;
+        return null;
     }
 }
